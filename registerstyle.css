@@ -1,0 +1,316 @@
+body {
+    background-color: #182029;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 100vh;
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+
+.overlay-content h2 {
+color: white;
+}
+
+.create-account-overlay {
+display: none; /* Initially hide the overlay */
+position: fixed;
+top: 0;
+left: 0;
+width: 100%; /* Set width to 100% of the viewport */
+height: 100%; /* Set height to 100% of the viewport */
+z-index: 999;
+justify-content: center;
+align-items: center;
+overflow: hidden; /* Hide the scrollbar */
+transition: opacity 0.3s ease;
+
+}
+
+.create-account-overlay.active {
+opacity: 1;
+}
+
+.overlay-content {
+background-color: #1c1c1c;
+padding: 30px;
+border-radius: 20px;
+box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.4);
+text-align: center;
+max-width: 400px;
+width: 80%;
+height: auto;
+max-height: 95%;
+overflow-y: auto;
+overflow: hidden;
+opacity: 0;
+animation: fadeInOverlay 0.0s ease forwards;
+
+}
+
+@keyframes fadeInOverlay {
+from {
+opacity: 0;
+}
+to {
+opacity: 1;
+}
+}
+
+.close-button {
+position: absolute;
+top: 60px;
+right: 885px;
+font-size: 15px;
+color: #ffffff;
+cursor: pointer;
+background-color: transparent;
+border: none;
+transition: color 0.3s ease;
+}
+.close-button:hover {
+color: #fff;
+}
+
+/* Styling for form fields */
+.overlay-content input[type="text"],
+.overlay-content input[type="email"],
+.overlay-content input[type="password"],
+.overlay-content input[type="tel"] {
+transition: all 0.3s ease;
+border-radius: 25px;
+padding: 15px 20px;
+border: 1px solid #ced4da;
+font-size: 16px;
+width: 100%;
+margin-bottom: 30px;
+margin-top: -9px; /* Add margin to the top of the input fields */
+
+}
+
+.overlay-content input[type="text"]:focus,
+.overlay-content input[type="email"]:focus,
+.overlay-content input[type="password"]:focus,
+.overlay-content input[type="tel"]:focus {
+border-color: #343a40;
+box-shadow: 0 0 10px rgba(52, 58, 64, 0.5);
+transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Styling for submit button */
+.overlay-content button[type="submit"] {
+width: 100%;
+font-size: 18px;
+padding: 15px 0;
+background-color: #343a40;
+border-color: #343a40;
+color: #fff;
+border-radius: 25px;
+cursor: pointer;
+transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.overlay-content button[type="submit"]:hover {
+background-color: #212529;
+transform: scale(1.05);
+}
+
+.overlay-content button[type="submit"]:focus {
+outline: none;
+}
+
+
+
+
+.btn-register {
+    width: 100%;
+    font-size: 18px;
+    padding: 15px 0;
+}
+
+.create-account-overlay {
+display: none;
+position: fixed;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+z-index: 999;
+justify-content: center;
+align-items: center;
+overflow: hidden;
+}
+
+.overlay-content {
+
+padding: 111px;
+border-radius: 20px;
+box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.4);
+text-align: center;
+max-width: 575px;
+width: 80%;
+height: 90%; /* Adjusted height to increase the size */
+overflow-y: auto;
+overflow: hidden;
+}
+
+
+
+.overlay-content h2 {
+margin-top: -90px; /* Add margin between header and form fields */
+margin-bottom: 40px;
+}
+
+.overlay-content .form-group {
+margin-bottom: 20px; /* Add margin between form fields */
+}
+
+.overlay-content input[type="tel"] {
+transition: all 0.3s ease;
+border-radius: 100px;
+padding: 15px 80px; /* Match padding with other input fields */
+border: 1px solid #ced4da;
+font-size: 16px;
+width: 100%; /* Take up full width of the container */
+margin-bottom: 20px; /* Match margin with other input fields */
+}
+
+.register-link {
+text-align: center;
+margin-top: 20px;
+color: #6c757d;
+width: 100px;
+}
+
+.register-link a {
+color: #343a40;
+text-decoration: none;
+font-weight: bold;
+
+}
+
+.register-link a:hover {
+color: #212529;
+}
+
+#termsMessage {
+display: none;
+font-size: 14px;
+margin-top: 5px;
+text-align: center;
+}
+
+/* Add animation for the message */
+@keyframes pulse {
+0% {
+opacity: 0;
+}
+100% {
+opacity: 1;
+}
+}
+
+/* Apply the animation to the message */
+#termsMessage.show-message {
+animation: pulse 0.5s ease-in-out;
+display: block;
+}
+
+.form-check-label {
+color: #fff;
+font-size: 14px;
+margin-left: 5px; /* Adjust the left margin */
+}
+
+.form-check-label a {
+color: #fff;
+text-decoration: none;
+font-weight: bold;
+}
+
+.terms-popup {
+display: none;
+position: fixed;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%);
+background-color: #ffffff;
+padding: 30px;
+border-radius: 20px;
+box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.4);
+z-index: 1000;
+width: 80%; /* Set width to match the width of the overlay container */
+max-width: 600px; /* Set maximum width if needed */
+height: auto; /* Set a fixed height for the terms popup */
+overflow-y: auto; /* Add vertical scrollbar when content exceeds height */
+}
+
+.terms-content {
+text-align: left;
+color: #343a40;
+max-height: 80vh; /* or any desired value */
+overflow-y: auto;/* Add vertical scrollbar when content exceeds height */
+}
+
+.terms-content h2 {
+margin-bottom: 20px;
+font-size: 24px;
+}
+
+.terms-content p {
+font-size: 16px;
+line-height: 1.5;
+margin-bottom: 10px;
+}
+
+.closes-button {
+position: absolute;
+top: 6px;
+left: 5px;
+font-size: 24px;
+color: #fff;
+cursor: pointer;
+background-color: transparent;
+border: none;
+}   
+
+.privacy-policy-popup {
+display: none;
+position: fixed;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%);
+background-color: #ffffff;
+padding: 30px;
+border-radius: 20px;
+box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.4);
+z-index: 1000;
+width: 80%; /* Set width to match the width of the overlay container */
+max-width: 600px; /* Set maximum width if needed */
+height: auto; /* Set a fixed height for the terms popup */
+overflow-y: auto; /* Add vertical scrollbar when content exceeds height */
+}
+
+.privacy-policy-content {
+text-align: left;
+color: #343a40;
+max-height: 80vh; /* or any desired value */
+overflow-y: auto;/* Add vertical scrollbar when content exceeds height */
+}
+
+
+.privacy-policy-content  h2 {
+margin-bottom: 20px;
+font-size: 24px;
+}
+
+.privacy-policy-content  p {
+font-size: 16px;
+line-height: 1.5;
+margin-bottom: 10px;
+}
+

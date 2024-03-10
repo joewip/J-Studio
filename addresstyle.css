@@ -1,0 +1,87 @@
+body {
+    background-color: #182029;
+    color: #ffffff;
+    font-family: 'Arial', sans-serif;
+    padding-bottom: 50px;
+    margin: 0; /* Remove default margin */
+    overflow-x: hidden; /* Hide horizontal scrollbar */
+}
+
+.address-form {
+    background-color: #1c1c1c; /* Increased opacity for better contrast */
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.4), 0px 0px 40px rgba(0, 0, 0, 0.2);
+    width: 80%; /* Use percentage for responsiveness */
+    max-width: 600px; /* Set maximum width for larger screens */
+    margin: auto; /* Center the form */
+    margin-top: 30px; /* Add margin to the top */
+    color: #343a40;
+    overflow-y: hidden; /* Hide vertical scrollbar */
+}
+
+.address-form h2 {
+    margin-bottom: 30px;
+    text-align: center;
+    color: #ffff; /* Dark text color */
+    font-weight: bold; /* Make the text thicker */
+    font-size: 28px; /* Adjust font size */
+}
+
+.form-group label {
+    font-weight: bold;
+    color: #ffff; /* Dark text color */
+}
+
+.form-group input[type="text"] {
+    border-radius: 25px;
+    padding: 12px; /* Reduced padding for a more compact look */
+    border: 1px solid #ced4da;
+    width: 100%;
+    color: #495057; /* Blend text color */
+    background-color: #f8f9fa; /* Blend background color */
+    margin-bottom: 20px;
+    transition: border-color 0.3s ease; /* Smooth transition on focus */
+}
+
+.form-group input[type="text"]:focus {
+    border-color: #343a40;
+    box-shadow: 0 0 10px rgba(52, 58, 64, 0.5);
+}
+
+.form-group input[type="text"]:hover {
+    border-color: #6c757d; /* Change border color on hover */
+}
+
+.btn-dark {
+background-color: #212529;
+border-color: #212529;
+transition: background-color 0.3s ease, transform 0.3s ease;
+width: 100%;
+margin-top: 20px;
+padding: 15px;
+border-radius: 30px;
+font-weight: bold;
+color: #ffffff;
+}
+
+.btn-dark:hover {
+background-color: #343a40;
+border-color: #343a40;
+transform: scale(1.05);
+}
+
+/* Add padding to the body */
+
+
+.btn-dark:focus {
+    box-shadow: none;
+}
+.form-group input[type="text"],
+.form-group select {
+transition: border-color 0.3s ease;
+}
+.form-group input[type="text"]:focus,
+.form-group select:focus {
+border-color: #343a40;
+}
